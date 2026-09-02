@@ -3,11 +3,18 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  
 
   return (
     <>
     <div>Pagination button add</div>
-      
+    <button>
+      Prev
+    </button>
+
+    <button>
+      Next
+    </button>      
     </>
   )
 }
