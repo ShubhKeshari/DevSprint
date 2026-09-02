@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "../components/Card";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../redux/features/cartSlice";
 
 function Product() {
   const products = [
@@ -34,8 +36,7 @@ function Product() {
     price: 1200,
   },
 ];
-
-
+const dispatch = useDispatch();
  return (
     <div>
       <h1>Products</h1>
@@ -45,7 +46,7 @@ function Product() {
           key={product.id}
           title={product.title}
           description={product.description}
-          //onAddToCart={() => addToCart(product)}
+          onAddToCart={() => dispatch(addToCart(product))}
         />
       ))}
     </div>
