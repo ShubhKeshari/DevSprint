@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import { Route, Routes } from "react-router-dom";
 import { ThemeContext } from "./context/ThemeContext";
@@ -15,7 +15,7 @@ function App() {
       <div className={theme}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/products" element={<Product />} />
         </Routes>
       </div>
